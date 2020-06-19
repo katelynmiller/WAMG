@@ -10,14 +10,13 @@ import {
   Button,
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import LoginScreen from "./LoginScreen";
-import HomeScreen from "./HomeScreen";
 
 import { MonoText } from "../components/StyledText";
 import { StackActions } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import MapView from "react-native-maps";
+import Maps from "./Maps";
 
 const defaultMapRegion = {
   latitude: 42.33,
@@ -30,11 +29,11 @@ class LandingScreenScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Welcomt to Where are my Groceries</Text>
+        <Text>Welcome to Where are My Groceries</Text>
 
         <Button
           title="Find Groceries near by"
-          onPress={() => this.props.navigation.navigate("HomeScreen")}
+          onPress={() => this.props.navigation.navigate("MapScreen")}
         ></Button>
         {/* <Button
           title="Sign UP"

@@ -7,17 +7,18 @@ import useCachedResources from "./hooks/useCachedResources";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import LinkingConfiguration from "./navigation/LinkingConfiguration";
 import LandingScreen from "./screens/LandingScreen";
-
+import HomeScreen from "./screens/HomeScreen";
+import MapScreen from "./screens/Maps";
+import MapView from "react-native-maps";
 const Stack = createStackNavigator();
 
 export default function App(props) {
-  const isLoadingComplete = useCachedResources();
-
   return (
     <View style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Root" component={LandingScreen} />
+          <Stack.Screen name="MapScreen" component={MapScreen}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </View>
