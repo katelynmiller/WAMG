@@ -8,7 +8,9 @@ const MapScreen = (props) => {
     latitudeDelta: 0.05,
     longitudeDelta: 0.05,
   };
-  return <MapView region={defaultMapRegion}></MapView>;
+  return (
+    <MapView provider={PROVIDER_GOOGLE} region={defaultMapRegion}></MapView>
+  );
 };
 
 export default MapScreen;

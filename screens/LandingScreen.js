@@ -30,7 +30,7 @@ class LandingScreenScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Welcomt to Where are My Groceries</Text>
+        <Text>Welcomt to Where are my Groceries</Text>
 
         <Button
           title="Find Groceries near by"
