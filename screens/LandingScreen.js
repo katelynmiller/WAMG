@@ -27,21 +27,7 @@ const defaultMapRegion = {
 
 class LandingScreenScreen extends React.Component {
   render() {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Welcome to Where are My Groceries</Text>
-
-        <Button
-          title="Find Groceries near by"
-          onPress={() => this.props.navigation.navigate("MapScreen")}
-        ></Button>
-        {/* <Button
-          title="Sign UP"
-          onPress={() => this.props.navigation.navigate("SignUp")}
-        ></Button> */}
-      </View>
-      // <MapView style={{ flex: 1 }} initialRegion={defaultMapRegion}></MapView>
-    );
+    return <MapView region={defaultMapRegion}></MapView>;
   }
 }
 
