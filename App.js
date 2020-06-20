@@ -21,18 +21,15 @@ const defaultMapRegion = {
 
 export default function App(props) {
   return (
-    // <View style={styles.container}>
-    //   <NavigationContainer>
-    //     <Stack.Navigator>
-    //       <Stack.Screen name="Root" component={LandingScreen} />
-    //       <Stack.Screen name="MapScreen" component={MapScreen}></Stack.Screen>
-    //     </Stack.Navigator>
-    //   </NavigationContainer>
-    // </View>
     <View style={styles.container}>
-      {/* <MapView style={styles.map} region={defaultMapRegion}></MapView> */}
-      <Text>HEllo Testing Testing</Text>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Root" component={LandingScreen} />
+          <Stack.Screen name="MapScreen" component={MapScreen}></Stack.Screen>
+        </Stack.Navigator>
+      </NavigationContainer>
     </View>
+    // <MapView region={defaultMapRegion}></MapView>
   );
 }
 
@@ -40,11 +37,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fffd77",
-  },
-  texts: {
-    textAlign: "center",
-  },
-  map: {
-    ...StyleSheet.absoluteFillObject,
   },
 });

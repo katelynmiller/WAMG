@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   View,
   Button,
+  Dimensions,
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
@@ -25,10 +26,30 @@ const defaultMapRegion = {
   longitudeDelta: 0.0421,
 };
 
-class LandingScreenScreen extends React.Component {
+class LandingScreen extends React.Component {
   render() {
-    return <MapView region={defaultMapRegion}></MapView>;
+    return (
+      <View style={styles.container}>
+        <Button
+          title="Find Groceries Near By"
+          onPress={() => this.props.navigation.navigate("MapScreen")}
+        ></Button>
+      </View>
+    );
   }
 }
 
-export default LandingScreenScreen;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  mapStyle: {
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
+  },
+});
+
+export default LandingScreen;
