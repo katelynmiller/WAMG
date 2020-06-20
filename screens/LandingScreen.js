@@ -32,7 +32,7 @@ class LandingScreen extends React.Component {
       <View style={styles.container}>
         <Button
           title="Find Groceries Near By"
-          onPress={() => this.props.navigation.navigate("MapScreen")}
+          onPress={() => this.props.navigation.navigate("Stores Nearby")}
         ></Button>
       </View>
     );

@@ -24,8 +24,11 @@ export default function App(props) {
     <View style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Root" component={LandingScreen} />
-          <Stack.Screen name="MapScreen" component={MapScreen}></Stack.Screen>
+          <Stack.Screen name="WAMG" component={LandingScreen} />
+          <Stack.Screen
+            name="Stores Nearby"
+            component={MapScreen}
+          ></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </View>
